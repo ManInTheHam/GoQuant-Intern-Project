@@ -125,7 +125,7 @@ Amount
 ## ⚠️ Important Considerations
 API Credentials
 Update the main function with your own Deribit client ID and secret.
-# Tip: Use environment variables or a .env config file instead of hardcoding them.
+Tip: Use environment variables or a .env config file instead of hardcoding them.
 
 Error Handling
 Basic cURL error checks are included, but you should add robust error handling for:
