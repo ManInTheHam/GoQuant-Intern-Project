@@ -98,7 +98,7 @@ mkdir include
 mv path/to/json.hpp include/
 ```
 
-##🧪 Compilation
+## 🧪 Compilation
 To compile the system:
 
 ```bash
@@ -125,25 +125,21 @@ Amount
 ## ⚠️ Important Considerations
 API Credentials
 Update the main function with your own Deribit client ID and secret.
-🔒 Tip: Use environment variables or a .env config file instead of hardcoding them.
+# Tip: Use environment variables or a .env config file instead of hardcoding them.
 
 Error Handling
 Basic cURL error checks are included, but you should add robust error handling for:
-
-API response parsing
-
-Invalid input
-
-Failed requests
-
-Rate Limiting
+-API response parsing
+-Invalid input
+-Failed requests
+-Rate Limiting
 Be aware of Deribit’s API rate limits. Use sleep/delays or exponential backoff on HTTP 429 errors.
 
 Test Environment
 This code is designed for the Deribit Test API.
 ❗ Do not use with real funds.
 
-###🧪 Test Environment
+## 🧪 Test Environment
 1. OS: Ubuntu 22.04
 2. Compiler: GCC 11.4
 3. API: Deribit Testnet
@@ -151,7 +147,7 @@ This code is designed for the Deribit Test API.
 ## Author
 Created by ManInTheHam
 GitHub: @ManInTheHam
-X: (https://x.com/ManInTheHam_)
-LinkedIn: (https://www.linkedin.com/in/soham-joshi-54aa171aa/)
+[X](https://x.com/ManInTheHam_)
+[LinkedIn](https://www.linkedin.com/in/soham-joshi-54aa171aa/)
 
 
