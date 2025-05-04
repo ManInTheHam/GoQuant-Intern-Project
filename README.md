@@ -1,11 +1,11 @@
-# 📈 Deribit API Trading System in C++
+#  Deribit API Trading System in C++
 
 A C++ trading system that interacts with the [Deribit Test API](https://test.deribit.com/).  
 It enables you to place, cancel, and modify orders, view the order book, and check position details.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Order Placement**: Submit buy/sell orders with specified price and quantity.
 - **Order Management**: Cancel or modify existing orders.
@@ -14,7 +14,7 @@ It enables you to place, cancel, and modify orders, view the order book, and che
 
 ---
 
-## 🧠 Code Description
+## Code Description
 
 The core logic is implemented through the following functions:
 
@@ -50,7 +50,7 @@ The core logic is implemented through the following functions:
 
 ---
 
-## 🧰 Requirements
+## Requirements
 
 - C++11 or later compiler (e.g., GCC)
 - cURL (HTTP client library)
@@ -58,7 +58,7 @@ The core logic is implemented through the following functions:
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ### 1. Install cURL
 
@@ -81,7 +81,7 @@ mkdir -p include/
 mv json.hpp include/
 ```
 
-## 🛠️ Setup
+## Setup
 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
@@ -98,7 +98,7 @@ mkdir include
 mv path/to/json.hpp include/
 ```
 
-## 🧪 Compilation
+## Compilation
 To compile the system:
 
 ```bash
@@ -106,37 +106,46 @@ g++ main.cpp -o trading_system -lcurl -I include
 ```
 If using apt to install nlohmann-json3-dev, the -I include is optional.
 
-## ▶️ Usage
-Run the compiled executable:
+## Usage
+1. Run the compiled executable:
 
 ```bash
 ./trading_system
 ```
-The program will display a menu of options.
+2. The program will display a menu of options.
 
-Enter the number corresponding to the desired action (e.g., place order, get order book, etc.).
+3. Enter the number corresponding to the desired action (e.g., place order, get order book, etc.).
 
-Follow prompts to provide input like:
-Instrument name (e.g., BTC-PERPETUAL)
-Order ID
-Price
-Amount
+4. Follow prompts to provide input like:
 
-## ⚠️ Important Considerations
-API Credentials
-Update the main function with your own Deribit client ID and secret.
-Tip: Use environment variables or a .env config file instead of hardcoding them.
+- Instrument name (e.g., BTC-PERPETUAL)
+- Order ID
+- Price
+- Amount
 
-Error Handling
+## Important Considerations
+- API Credentials
+
+
+Update the `main` function with your own Deribit client ID and secret.
+
+Tip: Use environment variables or a `.env` config file instead of hardcoding them.
+
+- Error Handling
+
 Basic cURL error checks are included, but you should add robust error handling for:
--API response parsing
--Invalid input
--Failed requests
--Rate Limiting
-Be aware of Deribit’s API rate limits. Use sleep/delays or exponential backoff on HTTP 429 errors.
+1. API response parsing
+2. Invalid input
+3. Failed requests
 
-Test Environment
-This code is designed for the Deribit Test API.
+- Rate Limiting
+
+ Be aware of Deribit’s API rate limits. Use sleep/delays or exponential backoff on `HTTP 429` errors.
+
+- Test Environment
+  
+This code is designed for the [Deribit Test API](https://test.deribit.com/dashboard).
+
 ❗ Do not use with real funds.
 
 ## 🧪 Test Environment
@@ -147,7 +156,9 @@ This code is designed for the Deribit Test API.
 ## Author
 Created by ManInTheHam
 GitHub: @ManInTheHam
+
 [X](https://x.com/ManInTheHam_)
+
 [LinkedIn](https://www.linkedin.com/in/soham-joshi-54aa171aa/)
 
 
