@@ -28,8 +28,11 @@ sudo apt install libcurl4-openssl-dev
 
 
 # How to Build
-Clone or download this repository, then compile the code:
-g++ deribit.cpp -o deribit -lcurl
+1. Clone the repository to your local machine:
+    ```bash
+    git clone https://github.com/yourusername/your-repo-name.git
+    cd your-repo-name
+    ```
 
 # How to Run
 Once compiled, run the executable:
