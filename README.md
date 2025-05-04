@@ -81,7 +81,7 @@ mkdir -p include/
 mv json.hpp include/
 ```
 
-# 🛠️ Setup
+## 🛠️ Setup
 1. Clone the Repository
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
@@ -98,7 +98,7 @@ mkdir include
 mv path/to/json.hpp include/
 ```
 
-🧪 Compilation
+##🧪 Compilation
 To compile the system:
 
 ```bash
@@ -106,7 +106,7 @@ g++ main.cpp -o trading_system -lcurl -I include
 ```
 If using apt to install nlohmann-json3-dev, the -I include is optional.
 
-▶️ Usage
+## ▶️ Usage
 Run the compiled executable:
 
 ```bash
@@ -122,7 +122,7 @@ Order ID
 Price
 Amount
 
-⚠️ Important Considerations
+## ⚠️ Important Considerations
 API Credentials
 Update the main function with your own Deribit client ID and secret.
 🔒 Tip: Use environment variables or a .env config file instead of hardcoding them.
@@ -143,18 +143,15 @@ Test Environment
 This code is designed for the Deribit Test API.
 ❗ Do not use with real funds.
 
-🧪 Test Environment
-OS: Ubuntu 22.04
+###🧪 Test Environment
+1. OS: Ubuntu 22.04
+2. Compiler: GCC 11.4
+3. API: Deribit Testnet
 
-Compiler: GCC 11.4
-
-API: Deribit Testnet
-
-🙋‍♂️ Author
+## Author
 Created by ManInTheHam
-
 GitHub: @ManInTheHam
-
-LinkedIn: (Add your profile link here)
+X: (https://x.com/ManInTheHam_)
+LinkedIn: (https://www.linkedin.com/in/soham-joshi-54aa171aa/)
 
 
