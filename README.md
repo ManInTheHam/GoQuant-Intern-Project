@@ -1,42 +1,160 @@
-# Deribit API Trading System in C++
-This project is a trading system built in C++ for interacting with the Deribit Test API. It allows you to place, cancel, modify orders, view the order book, and retrieve current position details on the Deribit platform(https://test.deribit.com/). The project uses cURL for HTTP requests and nlohmann/json for JSON parsing.
+# 📈 Deribit API Trading System in C++
 
-# Features
-Order Placement: Submit orders at specific price and quantity for various instruments.
-Order Management: Cancel and modify existing orders.
-Order Book Retrieval: View detailed order book data including bids, asks, and market information.
-Position Details: Retrieve position details for a specific instrument.
+A C++ trading system that interacts with the [Deribit Test API](https://test.deribit.com/).  
+It enables you to place, cancel, and modify orders, view the order book, and check position details.
 
-# Requirements
-C++ Compiler: GCC (recommended) or any modern C++ compiler with C++11 support.
-cURL: Library for HTTP requests.
-JSON for Modern C++: Header-only library for JSON parsing by nlohmann/json.
+---
 
-# Dependencies
-cURL: Install via the following commands:
+## 🚀 Features
 
+- **Order Placement**: Submit buy/sell orders with specified price and quantity.
+- **Order Management**: Cancel or modify existing orders.
+- **Order Book Retrieval**: Fetch real-time bids, asks, and other market data.
+- **Position Info**: View your open positions for a specific instrument.
+
+---
+
+## 🧠 Code Description
+
+The core logic is implemented through the following functions:
+
+1. **`WriteCallback`**  
+   Handles response data from the Deribit API. cURL calls this function to append incoming data to a string.
+
+2. **`sendRequest`**  
+   Sends HTTP POST requests to the Deribit API, setting up the URL, payload, and authorization headers.
+
+3. **`getAccessToken`**  
+   Retrieves an access token using your client ID and secret. Required for private API calls.
+
+4. **`placeOrder`**  
+   Places a buy order by specifying the instrument, price, and amount.
+
+5. **`cancelOrder`**  
+   Cancels an existing order based on its order ID.
+
+6. **`modifyOrder`**  
+   Modifies an already placed order.
+
+7. **`getOrderBook`**  
+   Retrieves the order book for a specified instrument, printing bid/ask prices and quantities.
+
+8. **`getPosition`**  
+   Retrieves the current position for an instrument with details like liquidation price, size, and PnL.
+
+9. **`getOpenOrders`**  
+   Lists all open orders for your account.
+
+10. **`main`**  
+    Entry point of the program. Authenticates the user and displays a menu to interact with API functions.
+
+---
+
+## 🧰 Requirements
+
+- C++11 or later compiler (e.g., GCC)
+- cURL (HTTP client library)
+- [nlohmann/json](https://github.com/nlohmann/json) (Modern C++ JSON parser)
+
+---
+
+## 📦 Dependencies
+
+### 1. Install cURL
+
+```bash
 sudo apt update
 sudo apt install libcurl4-openssl-dev
-JSON for Modern C++: Download the header file from nlohmann/json GitHub page or install via a package manager:
 
+```
+
+2. Install nlohmann/json
+Via APT:
+
+```bash
 sudo apt install nlohmann-json3-dev
+```
+Or manually:
+```bash
+wget https://github.com/nlohmann/json/releases/latest/download/json.hpp
+mkdir -p include/
+mv json.hpp include/
+```
 
-# Setup
-Clone the repository to your local machine:
-
+# 🛠️ Setup
+1. Clone the Repository
+```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
-Ensure the necessary libraries (curl and nlohmann/json) are installed.
+```
+2. Install Required Libraries
+Make sure libcurl and nlohmann/json are installed on your system.
 
-Add the path to json.hpp if it's not already in your include path:
+3. (Optional) Add JSON Header
+If installing manually, place json.hpp inside an include/ directory:
 
-Place json.hpp in the include/ directory within the project.
+```bash
+mkdir include
+mv path/to/json.hpp include/
+```
 
-# Compilation
-Use the following command to compile the project:
+🧪 Compilation
+To compile the system:
 
+```bash
 g++ main.cpp -o trading_system -lcurl -I include
+```
+If using apt to install nlohmann-json3-dev, the -I include is optional.
 
-# 🙋‍♂️ Author
-Created by ManInTheHam.
-Feel free to connect on LinkedIn or GitHub!
+▶️ Usage
+Run the compiled executable:
+
+```bash
+./trading_system
+```
+The program will display a menu of options.
+
+Enter the number corresponding to the desired action (e.g., place order, get order book, etc.).
+
+Follow prompts to provide input like:
+Instrument name (e.g., BTC-PERPETUAL)
+Order ID
+Price
+Amount
+
+⚠️ Important Considerations
+API Credentials
+Update the main function with your own Deribit client ID and secret.
+🔒 Tip: Use environment variables or a .env config file instead of hardcoding them.
+
+Error Handling
+Basic cURL error checks are included, but you should add robust error handling for:
+
+API response parsing
+
+Invalid input
+
+Failed requests
+
+Rate Limiting
+Be aware of Deribit’s API rate limits. Use sleep/delays or exponential backoff on HTTP 429 errors.
+
+Test Environment
+This code is designed for the Deribit Test API.
+❗ Do not use with real funds.
+
+🧪 Test Environment
+OS: Ubuntu 22.04
+
+Compiler: GCC 11.4
+
+API: Deribit Testnet
+
+🙋‍♂️ Author
+Created by ManInTheHam
+
+GitHub: @ManInTheHam
+
+LinkedIn: (Add your profile link here)
+
+
