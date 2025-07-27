@@ -236,8 +236,8 @@ void getOpenOrders(const std::string& accessToken) {
 
 int main() {
     // Replace with your actual client credentials
-    std::string clientId = "BVUmeOyt";
-    std::string clientSecret = "d6g5hD9vStqevqX7q75qM3WsuEPKSllwLl7PIpYaMlk";
+    std::string clientId = "CLIENT_ID";
+    std::string clientSecret = "CLIENT_SECRET";
 
     // Retrieve the access token
     std::string accessToken = getAccessToken(clientId, clientSecret);
